@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    margin: 0;
+    padding: 20px;
+    animation: fadeIn 1s ease-in; /* Анимация появления */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Тень для таблицы */
+}
+
+th, td {
+    border: 1px solid #444; /* Темная граница */
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #1e1e1e; /* Темный заголовок */
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a; /* Чередование строк */
+}
+
+tr:hover {
+    background-color: #333; /* Подсветка строки при наведении */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    table {
+        font-size: 0.9em; /* Уменьшение шрифта на мобильных */
+    }
+
+    th, td {
+        padding: 8px; /* Уменьшение отступов в ячейках */
+    }
+}
+
+/* Снег */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
