@@ -4,7 +4,6 @@ body {
     color: #ffffff; /* Белый текст */
     margin: 0;
     padding: 20px;
-    animation: fadeIn 1s ease-in; /* Анимация появления */
 }
 
 header {
@@ -42,37 +41,54 @@ tr:hover {
 }
 
 /* Адаптивность для мобильных устройств */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 10px; /* Уменьшение отступов для мобильных */
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 1.8em; /* Уменьшение заголовка на мобильных */
     }
 
     table {
-        font-size: 0.9em; /* Уменьшение шрифта на мобильных */
+        font-size: 0.8em; /* Уменьшение шрифта на мобильных */
+        border-collapse: collapse; /* Убедитесь, что границы не дублируются */
     }
 
     th, td {
-        padding: 8px; /* Уменьшение отступов в ячейках */
+        padding: 8px; /* Уменьшение отступов в ячейках на мобильных */
+    }
+
+    /* Упрощение отображения ячеек на мобильных */
+    tr {
+        display: flex; /* Использование flexbox для строк */
+        justify-content: space-between; /* Равномерное распределение ячеек */
+        margin-bottom: 10px; /* Отступ между строками */
+    }
+
+    td {
+        flex: 1; /* Равномерное распределение ширины ячеек */
+        min-width: 80px; /* Минимальная ширина ячеек для удобства чтения */
+        display: flex; /* Использование flex для ячеек */
+        justify-content: space-between; /* Равномерное распределение текста внутри ячейки */
+        align-items: center; /* Центрирование текста по вертикали */
+    }
+
+    /* Скрытие заголовков для мобильных */
+    th {
+        display: table-cell; /* Заголовки остаются видимыми */
+    }
+
+    /* Выделение предмета */
+    td:nth-child(1) {
+        font-weight: bold; /* Выделение предмета */
+        flex: 2; /* Увеличение ширины для предмета */
+    }
+
+    /* Выравнивание времени */
+    td:nth-child(2) {
+        text-align: right; /* Выравнивание времени вправо */
+        flex: 1; /* Уменьшение ширины для времени */
     }
 }
 
-/* Снег */
-.snowflake {
-    position: absolute;
-    top: -10px;
-    color: white;
-    font-size: 1em;
-    opacity: 0.8;
-    pointer-events: none;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
-}
