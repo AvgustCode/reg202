@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"> <!-- Указывает, что документ на русском языке -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Расписание</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Устанавливает кодировку документа на UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Настройки для адаптивного дизайна -->
+    <title>Расписание</title> <!-- Заголовок страницы -->
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS файла для стилей -->
 </head>
-<body class="dark-theme"> <!-- Установим темную тему по умолчанию -->
+<body class="dark-theme"> <!-- Устанавливаем темную тему для страницы -->
+    
+    <span class="loader"></span> <!-- Индикатор загрузки, который будет отображаться на странице -->
+    
     <header>
-        <h1>Расписание занятий  18.11 - 23.11 </h1>
+        <h1>Расписание занятий  18.11 - 23.11 </h1> <!-- Заголовок страницы -->
     </header>
 
-    <table id="schedule">
+    <table id="schedule"> <!-- Таблица для расписания -->
         <thead>
             <tr>
                 <th>День</th>
@@ -38,7 +41,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>41 | Разговоры о важном</td>
+                <td></td>
                 <td>26 | История ИЗО</td>
                 <td>26 | История ИЗО</td>
             </tr>
@@ -48,8 +51,8 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>42 | Эстетка</td>
-                <td>42 | Эстетка</td>
+                <td>16 | Английский</td>
+                <td>16 | Английский</td>
             </tr>
             <tr>
                 <td>Четверг</td>
@@ -65,23 +68,22 @@
                 <td>Дист | Эстетика</td>
                 <td>Дист | Эстетика</td>
                 <td>Дист | История ИЗО</td>
-                <td>Дист | Английский</td>
+                <td>Дист | История ИЗО</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <td>Суббота Агр</td>
+                <td>Суббота</td>
+                <td>26 | История ИЗО</td>
+                <td>26 | История ИЗО</td>
+                <td>32 | Английский</td>
+                <td>32 | Английский</td>
                 <td></td>
-                <td></td>
-                <td>10:30 - 11:35 | 16 | Экология</td>
-                <td>11:55 - 13:00 | 16 | Экология</td>
-                <td>13:10 - 14:15 | 2 | Физ-ра</td>
                 <td></td>
             </tr>
         </tbody>
     </table>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Подключение JavaScript файла (если он нужен) -->
 </body>
 </html>
-
